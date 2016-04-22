@@ -1,0 +1,40 @@
+﻿<Window x:Class="U0224052_playFair.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:U0224052_playFair"
+        mc:Ignorable="d"
+        Title="聯合大學CSIE 406 U0224052 多圖替代法" Height="350" Width="525" MinHeight="200" MinWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <!--劃出四個row的空間-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <!--劃出4個column的空間-->
+        <TextBlock x:Name="hideForShowOutComeBlock" Grid.Column="1" HorizontalAlignment="Stretch" Margin="5, 5, 5, 5" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Grid.ColumnSpan="2" MinHeight="21" MinWidth="168"/>
+        <!--用於顯示結果 正常不使用的時候不顯示文字-->
+        <TextBox x:Name="userInputStringBox" Grid.ColumnSpan="2" MinHeight="23" Margin="5, 5, 5, 0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" MinWidth="213" Grid.Column="1"/>
+        <!--用於給予使用者輸入的框框-->
+        <TextBlock x:Name="tellUserToInputStringBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5, 5, 0, 0" Grid.Row="1" TextWrapping="Wrap" Text="請輸入您想要加密的字串" VerticalAlignment="Top" Grid.ColumnSpan="2" MinHeight="21"/>
+        <!--提示使用者要下方區塊要輸入的內容(想要加密的字串)-->
+        <Button x:Name="sendUserStringbutton" Content="確認輸入" Grid.Column="3" HorizontalAlignment="Left" Margin="5, 5, 0, 0" Grid.Row="1" VerticalAlignment="Center" MinWidth="75" Click="sendUserStringbutton_Click"/>
+        <!--確定將內容傳輸到後方進行加密運算按鈕-->
+        <Button x:Name="resetbutton" Content="重新輸入" Grid.Column="3" HorizontalAlignment="Left" Margin="5, 5, 5, 5" Grid.Row="1" VerticalAlignment="Bottom" MinWidth="75" Click="resetbutton_Click"/>
+        <!--重新輸入按鈕 會淨空旁邊方框內的輸入文字-->
+        <DataGrid x:Name="outputGrid" HorizontalAlignment="Right" Margin="0,10,10,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" MinHeight="50" Grid.RowSpan="2" MinWidth="150" Grid.Column="2" Height="100"/>
+        <CheckBox x:Name="askIfShowKeycheck" Content="是否顯示金鑰" Grid.Column="3" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Grid.Row="1" Checked="askIfShowKeycheck_Checked"/>
+
+
+
+    </Grid>
+</Window>
